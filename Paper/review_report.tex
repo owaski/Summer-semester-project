@@ -1,0 +1,125 @@
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\title{Review Report on Global Non-linear Effect of Temperature on Economic Production}
+\author{Siqi Ouyang 2017011385 \\ Institute for Interdisciplinary Information Science \\ Tsinghua University}
+\begin{document}
+\nocopyright
+\maketitle
+
+%\begin{abstract}
+%  \begin{quote}
+%    \textbf{TODO}
+%  \end{quote}
+%\end{abstract}
+
+\section{Summary}
+
+The topic about correlation between temperature and economic production has been put forward for some years. Previous paper has revealed such correlations in both micro and macro levels, but how they are connected is still a question. Additionally, strong responses of output to temperature in micro level are not apparent in macro level when focused on wealthy countries. This paper aims to dig deeper into these questions.
+
+In the first section, author aggregates micro-level response functions, which are non-linear to temperature based on previous results, to build a theoretical macro-level response function. The function is smooth concave and indicates that the optimum temperature is lower than threshold temperature if the slope beyond threshold is steeper than that below threshold.
+
+In the second section, an regression model is used to construct the relationship between productivity and temperature. Author carefully adjusts the variables contained in model in order to lower the bias. The results exhibit that the function is highly non-linear and globally generalizable to some extent.
+
+In the third section, the robustness of above results has been tested. Different data samples, model specifications and sources of data have been taken into account and coefficients varies a little. Then, lagged independent variables are introduced and long-run effect of temperature is analyzed. Additionally, differences between poor and rich countries are considered and they cannot reject the hypothesis that rich and poor countries respond same to temperature. Author also compares the result with Dell Jones Olken 2012.
+
+In the last section, author builds an impact projection model containing different scenarios such as short-run, long-run and pooled data, differentiated-data. Damage function is constructed based on projection. It indicates a roughly linear loss and the reason is presented in the paper. 
+
+\section{Review}
+
+\subsection{Research Question}
+
+Temperature is a basic element in the entire world. We cannot see it, but we can feel it everywhere. Analyzing the influence of such an essential element itself is somewhat valuable. As said in the paper, how temperature affects natural processes such as biological and chemical reaction has been researched for a long time, but the effect of temperature to human society, which is also an extremely complicated system, remains vague. In particular, author selects economic production as the main topic. It is interesting since temperature and economic production seems have no direct connections between each other. Revealing such connections is nontrivial. Also, it provides a prediction for potential impact of temperature change, which serves as a reference for government to design future policies. 
+
+The position of this paper in the whole research field is to fill in the gap and deepen the understanding to the influence of temperature. Specifically, it tries to establish a link between previous micro and macro study, elaborate the non-linear effect of temperature on economic production and in addition correct the previous thought about wealthy countries. 
+
+\subsection{Theoretical Model}
+
+The paper presents a simple but explicit formula:
+\begin{eqnarray}
+  Y(\overline{T}) = \sum_{i}Y_i(\overline{T}) = \sum_{i}\int_{-\infty}^{\infty}f_i(T)\cdot g_i(T-\overline{T})dT
+\end{eqnarray}
+where $f_i(T)$ denotes productivity of industry $i$ at $T$ and $g_i(T-\overline{T})$ denotes the ``mass'' density function, in which ``mass'' means the quantity of productive units at temperature $T$. In this formula we can immediately see how non-linear effects of temperature to micro output aggregate and lead to the non-linear effect in macroscale. Although the model does not include many other factors that may affect both temperature and economic output, it accomplishes the task to give a high level idea of such non-linear correlation.
+
+\subsection{Regression Model}
+
+% 为什么降水不会影响, 是因为温度比降水更加基本吗
+% poor and rich 都呈现non-linear的趋势, 但是rich依然更加有优势
+% 验证non-linear的过程, 一是先用线性回归, 对系数再做一次回归, 得到二次函数
+
+The regression model takes first difference of the natural log of GDP per capita as a function of many factors:
+\begin{eqnarray}
+  \Delta Y_{it} & = & h(T_{it}) + \lambda_1P_{it} + \lambda_2P_{it}^2 + \mu_i\nonumber\\
+                & & + \nu_t + \theta_it + \theta_{i2}t^2 + \epsilon_{it} \label{main}
+\end{eqnarray}
+The model includes temperature effect $h(T_{it})$, precipitation effect $\lambda_1P_{it} + \lambda_2P_{it}^2$, country fixed effect $\mu_i$, global year fixed effect $\nu_t$ and a flexible country-specific time trend $\theta_it + \theta_{i2}t^2$. The reason why author explicitly add the effect of precipitation is that precipitation can affect both local annual temperature and GDP. If the author does not add such variable, it may overcount the effect of temperature.
+
+Note that there should be some other natural phenomena having the same property, such as terrain. One possible reason author does not include this kind of variables is that most of the effects of such variables are covered by other country fixed effects and time trend. Another reason is just to maintain the simplicity of the model, since too many variables will only increase the complexity and difficulty in data analysis and may lead to overfitting. This does not mean there is some kind of priority between precipitation and terrain. In my opinion, precipitation here is just a representation in such kind of factors.
+
+Then it goes to the calculation of function $h$. The dataset covers almost all countries in a long time period (1960-2010). Applying computations to the dataset and the following regression curve can be obtained:
+\begin{center}
+  \includegraphics[width = 3in]{pic1.png}
+\end{center}
+This graph clearly reflects why previous studies find wealthy countries do not respond to temperature. Most of rich countries almost lie nearby optimum temperature where slope is roughly zero. However, this does not mean these countries will not suffer loss due to increase of temperature. In the verification of function $h$, author uses 3 ways to check the global generalizability of $h$:
+\begin{itemize}
+\item[1)] Examine different subsamples and find no evidence $h$ is dramatically different across these subsamples. 
+\item[2)] Run linear regression for each country and compare these results with global estimation of $h$. The results from individual countries are highly consistent with global response fuction. 
+\item[3)] Reformulate $h$ to be:
+  \begin{eqnarray}
+    h(T_{it}) = \beta_1T_{it} + \beta_2(T_{it}\cdot \overline{T}_i) + \beta_3(T_{it}\cdot \overline{Y}_i)
+  \end{eqnarray}
+  And find that $\beta_1>0,\beta_2<0$, which corresponds to previous calculation, and $\beta_3$ is not significant different from zero. 
+\end{itemize}
+All these methods say that rich and poor countries respond to temperature in similar non-linear form. This result is able to alarm those rich countries that they should do something instead of just wait for high temperature comming. Thus, here the author roughly answers the research question. 
+
+\subsection{Robustness}
+
+Although the responses from rich and poor countries are similar, there are actually some little differences. Author modifies the original regression model to allow different response for poor and rich countries:
+\begin{eqnarray}
+  h(T_{it}) = \beta_1T_{it} + \beta_2T_{it}^2 + D_i(\beta_3T_{it} + \beta_4T_{it}^2)
+\end{eqnarray}
+$D_i$ is a indicator function of whether country $i$ is rich or poor, choosing the threshold between rich and poor as median PPP per capita income in 1980. There is a question here. Data back in 1980 cannot represent today's GDP per capita. Back then there were many countries which did not have statistic data of GDP per capita. Thus using these kind of data may not be very accurate. Despite of this flaw, the result illustrated below is very convincing:
+\begin{center}
+  \includegraphics{pic3.png}
+\end{center}
+There are both inverse-U shape but differ in slope at low and high temperature. Although author does not explain why it behaves in this way, rich countries do show stronger resistence of temperature change. I think one main reason is that the economic outputs of most rich countries are driven by high technology, while that of most poor countries are driven by agriculture and labor work which are more vulnerable to temperature change. 
+
+Another point in robustness analysis is about lagged effect. Author adds up to 5 lags to original regression model to test the influence of temperature change on future growth. However, as shown below, the marginal effect of temperature change reverses the sign when 3 lags are added.
+\begin{center}
+  \includegraphics[width = 2in]{pic4.png}
+\end{center}
+Even cold countries cannot benefit from temperature increase. This is very weird. I discuss it with groupmates several times but still cannot explain such phenomena.
+
+\subsection{Projection}
+
+In the this part, author builds a impact projection model to predict future effect of temperature change. From the graph below, we can explicitly see how the growth of economy affected by temperature.
+\begin{center}
+  \includegraphics[width = 3in]{pic5.png}
+\end{center}
+The curves representing development of each country expand from mid axis to the opposite direction. Red stands for GDP per capita with temperature change and grey stands for GDP per capita without temperature change. Author has the ability to exhibit results in a unique way to make even people who know nothing about it understand what he want to express. We should learn from it.
+
+As for the model construction, a detail is that author assume a linear increase between 2010 and 2100. However, if we look at world mean temperature record from NASA GISS, which is presented below, the speed of temperature increase is faster than before.
+\begin{center}
+  \includegraphics[width = 2.5in]{pic6.png}
+\end{center}
+Thus the prediction of such model is rather conservative. 
+
+\subsection{Additional Comments}
+
+This paper studies about the non-linear effect of temperature on economic output. However, it presents little explanation about why things work like this. In my opinion, the role of this paper in this field is more like constructing a framework for this kind of analysis, but not elaborating the underlying mechanism. There are a lot of work that needs to be done in the future.
+
+We can see that author tries to find the causality between temperature and economic output. For example, he adds precipitation to reduce the bias and baseline to estimate the impact of temperature change. However, these steps cannot support the causality. A regression model is unable to give causal inference. In my opinion, if we want to know more accurate causality, deeper understanding of the inner mechanism is needed so that we can build a better counterfactual model without temperature change and do A/B test.
+
+Additionally, although the paper is from \textit{Nature}, slight inconsistency of notation does exist and causes misunderstanding when reading paper.
+
+\bibliographystyle{aaai}
+\bibliography{Bibliography_File}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
