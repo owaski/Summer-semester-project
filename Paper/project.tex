@@ -138,11 +138,50 @@ The figure shows the change curves of monthly average AQI over the whole year fo
 
 It can be found that the curve of Xinjiang, which is at the top of the figure, is the most special. A possible reason is the unique natural and geographical conditions in Xinjiang. Another interesting phenomenon is that the AQI increases quickly between September and October in many province, which means that this is a general phenomenon in China. Similar to the analyses for 2014 in former research, the reason may be some special pollution processes in October, which leads to the decline in air quality across China. However, it can not be proved by the data.
 
+\begin{figure}[h]
+  \includegraphics[width = 8.5cm]{AQI_season.png}
+  \caption{Average AQI in 4 seasons}
+  \label{figure:7}
+\end{figure}
+
 The figure is the space distribution of AQI in China in spring, summer, autumn, and winter. It can be found that the distribution does not change a lot in four season, which means that the space distribution is general in the whole year. The visible difference is the integral level of AQI, and the regularity has been discussed above. As the figure shows, the AQI in spring and winter is higher than that in summer and autumn, which matches the conclusion above. 
 
 According to the discussion above, the independence of space distribution and time distribution of air pollutants has been verified preliminary.
 
 \section{Comparison with Standard}
+
+The space distribution and time distribution of air pollutants is discussed in detail above. However, the perniciousness of air pollutants can not be easily expressed by the concentration only without considering the standards.
+
+The standards are different in different countries. In China, the latest ambient air quality standards is \textbf{GB 3095-2012}. In this part, the standards will be used to measure the effect of air pollutants on people.
+
+\begin{table*}
+  \begin{tabular}{c|cccc}
+    \bf{Province} & \bf{PM2.5} & \bf{PM10} & \bf{SO2} & \bf{NO2} \\\hline
+    \csvreader[head to column names]{./csv/provincial_annual_pollutant.csv}{}{\\\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv}
+  \end{tabular}
+  \centering
+  \caption{Annually average concentration of pollutants in all provinces}
+  \label{table:2}
+\end{table*}
+
+The sheet shows the annual average concentration of PM$_{2.5}$, PM$_{10}$, SO$_{2}$, and NO$_{2}$ for every province. CO and O$_{3}$ are not considered because there are no annual average concentration standards for CO and O$_{3}$ in \textbf{GB 3095-2012}. It is not difficult to find that the concentrations of SO$_{2}$ and NO$_{2}$ satisfy secondary standards nearly in every province. However, there are only 7 and 10 provinces with concentration that satisfies secondary standard of PM$_{2.5}$ and PM$_{10}$ respectively. which is much worse than the situation of PM$_{2.5}$ and PM$_{10}$. That means the main pollutants that effect people are PM$_{2.5}$ and PM$_{10}$.
+
+A important value to measure the air quality is AQI. According to the computing method of AQI, AQI depends on the concentration of a pollutant that makes the most serious pollution. AQI is between 0 and 50 when all kinds of pollutants reach primary standard and is between 0 and 100 when all kinds of pollutants reach secondary standard.
+
+%%
+
+The table counts the number of days with AQI falling in six intervals, which represent different air quality level, for every province. It also shows the total number of days for all province together. It can be found that the number of days with AQI at level 1 and level 2 is more than eighty percent, and that the number of days with AQI at level 1 is more than quarter. Thirteen provinces had more than ninety percent of days with AQI no more than 100. That means the overall air quality in 2015 was not bad. However, days with AQI at level 5 and level 6 exist, which means that there is some days with very serious pollution in some regions, such as Beijing-Tianjin-Hebei Region.
+
+
+\begin{table*}[t]
+  \begin{tabular}{c|cccccccc}
+    \bf{Province} & \bf{0-50} & \bf{51-100} & \bf{101-150} & \bf{151-200} & \bf{201-300} & \bf{301-500} & \bf{Passing Rate($\mathbf{\leq 50}$)} & \bf{Passing Rate($\mathbf{\leq 100}$)} \\\hline
+    \csvreader[head to column names]{./csv/valid_days.csv}{}{\\\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv & \csvcolvi & \csvcolvii & \csvcolviii & \csvcolix}
+  \end{tabular}
+  \centering
+  \caption{Days of AQI on different level in all provinces}
+  \label{table:3}
+\end{table*}
 
 \end{document}
 

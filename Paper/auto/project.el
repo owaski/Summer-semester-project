@@ -21,6 +21,9 @@
     "figure:3"
     "figure:4"
     "figure:5"
-    "figure:6"))
+    "figure:6"
+    "figure:7"
+    "table:2"
+    "table:3"))
  :latex)
 

@@ -27,13 +27,19 @@
 \end{quote}
 \end{abstract}
 
+\section{Data Source}
+
+The amount of pollutants observed in each station is provided by Yang Yu. The shape of China and all provinces can be found on GADM\footnote{https://gadm.org/index.html}. 
+
 \section{Interpolation}
 
-There are many multivariate interpolation method for 2D interpolation, such as bilinear, bicubic methods (wiki). However, when applying these methods, there are always some empty parts in the map. It is because these methods are used to interpolate regular grid, but the position of stations does not form a regular grid. For this sort of scattered data, radial basis function is used for interpolation in the paper (wiki). The function form is rather simple. For any point $\mathbf{x}$, 
+There are many multivariate interpolation method for 2D interpolation, such as bilinear, bicubic methods (wiki). However, when applying these methods, there are always some empty parts in the map. It is because these methods are used to interpolate regular grid, but the position of stations does not form a regular grid. For this sort of scattered data, radial basis function(RBF) is used for interpolation in the paper (wiki). The function form is rather simple. For any point $\mathbf{x}$, 
 \begin{eqnarray}
   y(\mathbf{x}) = \sum_{i=1}^Nw_i\phi\left(\|\mathbf{x} - \mathbf{x_i}\|\right). 
 \end{eqnarray}
-$\mathbf{x_i}$ are those observation points and $\phi$ is a customized function. The estimation of $w_i$ can be solved by linear least square. Several different functions are tested respectively.
+$\mathbf{x_i}$ are those observation points and $\phi$ is a customized function. The estimation of $w_i$ can be solved by linear least square.
+
+Below several different functions are tested respectively. 
 \begin{figure}[h]
   \includegraphics[width = 8.5cm]{Interpolation_from_20150102_to_20151231.png}
   \caption{Interpolation of annually average concentration of PM2.5 using different
@@ -42,7 +48,9 @@ $\mathbf{x_i}$ are those observation points and $\phi$ is a customized function.
   \centering
 \end{figure}
 
-In these images, those interpolated by ``quadratic'' methods have a lot of empty parts caused by negative value. However, this does not happen in ``linear'' methods. When comparing ``linear'' methods $1/(1+r), e^{-r}, r$, the images in Xinjiang are quite different. In $e^{-r}$, concentration degrades so rapidly that only points close to observation station are not green. In contrast to $e^{-r}$, $r$-interpolation degrades much slower and most of Xinjiang is red. $1/(1+r)$ is in the 
+In these images, those interpolated by ``quadratic'' methods have a lot of empty parts caused by negative value. However, this does not happen in ``linear'' methods. When comparing ``linear'' methods $1/(1+r), e^{-r}, r$, the images in Xinjiang are quite different. In $e^{-r}$, concentration degrades so rapidly that only points close to observation station are not green. In contrast to $e^{-r}$, $r$-interpolation degrades much slower and most of Xinjiang is red. $1/(1+r)$ is the intermediate between $e^{-r}$ and $r$. Due to lack of data, we cannot determine which function is the best. For simplicity, $r$-interpolation is used throughout the project. 
+
+ One of the advantage of RBF is that $y$ is linear. Therefore, when it needs to compute the average value interpolation, calculating interpolation in each hour and then taking average for each point are not necessary. We can directly compute the average value for each station and then calculate the interpolation, which saves much of the time.
 
 \section{Space Distribution}
 
@@ -114,7 +122,7 @@ The regularities of space distribution and time distribution of pollutants have 
 
 \begin{figure}[h]
   \includegraphics[width = 8.5cm]{dailyavg_pro_pltn.png}
-  \caption{Daily average concentration of AQI for all provinces except Taiwan, Hong Kong and Macao} 
+  \caption{Daily average concentration of AQI for all provinces except Taiwan (lack of data)} 
   \label{figure:5}
 \end{figure}
 
@@ -122,7 +130,7 @@ The figure analyses the change curves of average AQI over 24 hours for every pro
 
 \begin{figure}[h]
   \includegraphics[width = 8.5cm]{monavg_pro_pltn.png}
-  \caption{Monthly average concentration of AQI for all provinces except Taiwan, Hong Kong and Macao} 
+  \caption{Monthly average concentration of AQI for all provinces except Taiwan (lack of data)} 
   \label{figure:6}
 \end{figure}
 
