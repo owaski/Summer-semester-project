@@ -3,6 +3,8 @@
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("article" "letterpaper")))
+   (TeX-add-to-alist 'LaTeX-provided-package-options
+                     '(("hyperref" "hidelinks") ("hypcap" "all")))
    (TeX-run-style-hooks
     "latex2e"
     "article"
@@ -12,7 +14,9 @@
     "helvet"
     "courier"
     "graphicx"
-    "csvsimple")
+    "csvsimple"
+    "hyperref"
+    "hypcap")
    (LaTeX-add-labels
     "figure:0"
     "figure:1"
