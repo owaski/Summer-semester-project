@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  30 AUG 2018 23:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  31 AUG 2018 00:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -405,11 +405,11 @@ Overfull \hbox (2.45404pt too wide) in paragraph at lines 66--68
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[1
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+]
 <./picture/Interpolation_from_20150102_to_20151231_linear.png, id=75, 462.528pt
  x 346.896pt>
 File: ./picture/Interpolation_from_20150102_to_20151231_linear.png Graphic file
@@ -587,11 +587,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 7874 strings out of 492995
- 124864 string characters out of 6132704
+ 7876 strings out of 492995
+ 124876 string characters out of 6132704
  240326 words of memory out of 5000000
  11224 multiletter control sequences out of 15000+600000
- 31780 words of font info for 89 fonts, out of 8000000 for 9000
+ 33965 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,11n,46p,857b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -653,7 +653,7 @@ arphic/gkaiu/gkaiu91.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic
 /local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 7/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on project.pdf (7 pages, 10180729 bytes).
+Output written on project.pdf (7 pages, 10181682 bytes).
 PDF statistics:
  397 PDF objects out of 1000 (max. 8388607)
  306 compressed objects within 4 object streams
