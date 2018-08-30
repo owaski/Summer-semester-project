@@ -1,1 +1,4 @@
 mktexpk --mfmode / --bdpi 600 --mag 1+57/600 --dpi 657 gbk55
+mktexpk --mfmode / --bdpi 600 --mag 1+0/600 --dpi 600 gbk37
+mktexpk --mfmode / --bdpi 600 --mag 1+0/600 --dpi 600 cyberb54
+mktexpk --mfmode / --bdpi 600 --mag 1+0/600 --dpi 600 cyberb54
