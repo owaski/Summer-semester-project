@@ -40,6 +40,17 @@ In this paper, six sorts of air pollutants PM2.5, PM10, SO2, NO2, O3, CO togethe
 
 The amount of pollutants observed in each station in 2015 is provided by Yang Yu. The data covers each hour in each station in 2015. There are 1497 stations in total. After removing those without coordinate and duplicate stations, 1256 stations are left and taken into account. To compute the average value of a particular region, the shape file of Chinese administrative division, which can be found on GADM\footnote{https://gadm.org/index.html}, is needed. With the shape file, we divide the map into 0.5 degree grid cell and aggregate the value of each cell in that region to obtain the average estimation.
 
+To make conclusions of different regions, we use the Chinese geographical division which divides China into seven geographical regions:
+\begin{itemize}
+\item Northeast: Heilongjiang, Jilin, Liaoning
+\item East: Shanghai, Jiangsu, Zhejiang, Anhui, Fujian, Jiangxi, Shandong, Taiwan
+\item North: Beijing, Tianjin, Shanxi, Hebei, Inner Mongolia
+\item Central: Henan, Hubei, Hunan
+\item South: Guangdong, Guangxi, Hainan, Hong Kong, Macao
+\item Southwest: Sichuan, Guizhou, Yunnan, Chongqing, Xizang
+\item Northwest: Shaanxi, Gansu, Qinghai, Ningxia, Xinjiang
+\end{itemize}
+
 \section{Interpolation}
 
 There are many multivariate interpolation method for 2D interpolation, such as bilinear, bicubic methods \shortcite{wiki:1}. However, when applying these methods, there are always some empty parts in the map. It is because these methods are used to interpolate regular grid, but the position of stations does not form a regular grid. For this sort of scattered data, radial basis function(RBF) is used for interpolation in the paper \shortcite{wiki:2}. The function form is rather simple. For any point $\mathbf{x}$,
