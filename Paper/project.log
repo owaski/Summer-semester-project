@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  30 AUG 2018 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  30 AUG 2018 23:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -362,6 +362,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 29.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 File: UTF8.bdg 2015/04/18 4.8.4
@@ -372,19 +376,15 @@ File: UTF8.enc 2015/04/18 4.8.4
 (/usr/local/texlive/2017/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
 File: UTF8.chr 2015/04/18 4.8.4
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 45.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 46.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
 
-Underfull \hbox (badness 5832) in paragraph at lines 50--51
+Underfull \hbox (badness 5832) in paragraph at lines 51--52
 []\OT1/ptm/m/n/10 Southwest: Sichuan, Guizhou, Yun-nan, Chongqing,
  []
 
@@ -395,130 +395,124 @@ File: ./picture/Interpolation_from_20150102_to_20151231.png Graphic file (type
 png)
  <use ./picture/Interpolation_from_20150102_to_20151231.png>
 Package pdftex.def Info: ./picture/Interpolation_from_20150102_to_20151231.png 
-used on input line 65.
+used on input line 66.
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
 
-Overfull \hbox (2.45404pt too wide) in paragraph at lines 65--67
+Overfull \hbox (2.45404pt too wide) in paragraph at lines 66--68
 [][] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
 
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./pictu
-re/Interpolation_from_20150102_to_20151231.png>]
-<./picture/Interpolation_from_20150102_to_20151231_linear.png, id=73, 462.528pt
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<./picture/Interpolation_from_20150102_to_20151231_linear.png, id=75, 462.528pt
  x 346.896pt>
 File: ./picture/Interpolation_from_20150102_to_20151231_linear.png Graphic file
  (type png)
 
 <use ./picture/Interpolation_from_20150102_to_20151231_linear.png>
 Package pdftex.def Info: ./picture/Interpolation_from_20150102_to_20151231_line
-ar.png used on input line 80.
+ar.png used on input line 81.
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
 
-Overfull \hbox (2.45404pt too wide) in paragraph at lines 80--81
+Overfull \hbox (2.45404pt too wide) in paragraph at lines 81--82
 [][] 
  []
 
-<./picture/dailyavg_pltn.png, id=76, 462.528pt x 346.896pt>
+<./picture/dailyavg_pltn.png, id=78, 462.528pt x 346.896pt>
 File: ./picture/dailyavg_pltn.png Graphic file (type png)
 
 <use ./picture/dailyavg_pltn.png>
-Package pdftex.def Info: ./picture/dailyavg_pltn.png used on input line 104.
+Package pdftex.def Info: ./picture/dailyavg_pltn.png used on input line 105.
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
 
-Overfull \hbox (2.45404pt too wide) in paragraph at lines 104--105
+Overfull \hbox (2.45404pt too wide) in paragraph at lines 105--106
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2 <./picture/Interpolation_from_20150102_to_20151231_linear.png>]
-<./picture/weekavg_pltn.png, id=88, 462.528pt x 346.896pt>
+[2 <./picture/Interpolation_from_20150102_to_20151231.png> <./picture/Interpola
+tion_from_20150102_to_20151231_linear.png>]
+<./picture/weekavg_pltn.png, id=90, 462.528pt x 346.896pt>
 File: ./picture/weekavg_pltn.png Graphic file (type png)
 
 <use ./picture/weekavg_pltn.png>
-Package pdftex.def Info: ./picture/weekavg_pltn.png used on input line 114.
+Package pdftex.def Info: ./picture/weekavg_pltn.png used on input line 115.
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
 
-Overfull \hbox (2.45404pt too wide) in paragraph at lines 114--115
+Overfull \hbox (2.45404pt too wide) in paragraph at lines 115--116
 [][] 
  []
 
-<./picture/monavg_pltn.png, id=90, 462.528pt x 346.896pt>
+<./picture/monavg_pltn.png, id=92, 462.528pt x 346.896pt>
 File: ./picture/monavg_pltn.png Graphic file (type png)
 
 <use ./picture/monavg_pltn.png>
-Package pdftex.def Info: ./picture/monavg_pltn.png used on input line 122.
+Package pdftex.def Info: ./picture/monavg_pltn.png used on input line 123.
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
 
-Overfull \hbox (2.45404pt too wide) in paragraph at lines 122--123
+Overfull \hbox (2.45404pt too wide) in paragraph at lines 123--124
 [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./picture/dailyavg_pro_pltn.png, id=92, 462.528pt x 346.896pt>
+<./picture/dailyavg_pro_pltn.png, id=94, 462.528pt x 346.896pt>
 File: ./picture/dailyavg_pro_pltn.png Graphic file (type png)
 
 <use ./picture/dailyavg_pro_pltn.png>
-Package pdftex.def Info: ./picture/dailyavg_pro_pltn.png used on input line 136
+Package pdftex.def Info: ./picture/dailyavg_pro_pltn.png used on input line 137
 .
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
 
-Overfull \hbox (2.45404pt too wide) in paragraph at lines 136--137
+Overfull \hbox (2.45404pt too wide) in paragraph at lines 137--138
 [][] 
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 137--137
+Underfull \hbox (badness 1708) in paragraph at lines 138--138
 []\OT1/ptm/m/n/10 Figure 6: Daily av-er-age con-cen-tra-tion of AQI for all
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./picture/monavg_pro_pltn.png, id=94, 462.528pt x 346.896pt>
+[3 <./picture/dailyavg_pltn.png> <./picture/weekavg_pltn.png> <./picture/monavg
+_pltn.png>] <./picture/monavg_pro_pltn.png, id=106, 462.528pt x 346.896pt>
 File: ./picture/monavg_pro_pltn.png Graphic file (type png)
 
 <use ./picture/monavg_pro_pltn.png>
-Package pdftex.def Info: ./picture/monavg_pro_pltn.png used on input line 144.
+Package pdftex.def Info: ./picture/monavg_pro_pltn.png used on input line 145.
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
 
-Overfull \hbox (2.45404pt too wide) in paragraph at lines 144--145
+Overfull \hbox (2.45404pt too wide) in paragraph at lines 145--146
 [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3 <./picture/dailyavg_pltn.png> <./picture/weekavg_pltn.png> <./picture/monavg
-_pltn.png>] <./picture/AQI_season.png, id=107, 462.528pt x 346.896pt>
+<./picture/AQI_season.png, id=108, 462.528pt x 346.896pt>
 File: ./picture/AQI_season.png Graphic file (type png)
 
 <use ./picture/AQI_season.png>
-Package pdftex.def Info: ./picture/AQI_season.png used on input line 154.
+Package pdftex.def Info: ./picture/AQI_season.png used on input line 155.
 (pdftex.def)             Requested size: 241.84842pt x 181.38736pt.
 
-Overfull \hbox (2.45404pt too wide) in paragraph at lines 154--155
+Overfull \hbox (2.45404pt too wide) in paragraph at lines 155--156
 [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 1014) in paragraph at lines 167--168
+Underfull \hbox (badness 1014) in paragraph at lines 168--169
 []\OT1/ptm/m/n/10 The stan-dards are dif-fer-ent in dif-fer-ent coun-tries. In
  []
 
 [4 <./picture/dailyavg_pro_pltn.png> <./picture/monavg_pro_pltn.png> <./picture
 /AQI_season.png>]
-Overfull \hbox (19.22894pt too wide) in paragraph at lines 212--217
+Overfull \hbox (19.22894pt too wide) in paragraph at lines 213--218
  [][] 
  []
 
@@ -576,12 +570,12 @@ LaTeX Font Warning: Font shape `C70/gkai/m/it' undefined
 (Font)              using `C70/gkai/m/n' instead on input line 24.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
  [5] [6] [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
  (./project.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 226.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 226.
 Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: 380188B38358B784BC93374C5F94DD65;458.
 
@@ -595,72 +589,74 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  7874 strings out of 492995
  124864 string characters out of 6132704
- 240856 words of memory out of 5000000
+ 240326 words of memory out of 5000000
  11224 multiletter control sequences out of 15000+600000
  31780 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,46p,796b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,11n,46p,857b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/arphic/gkaiu/gkaiu20.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/arphic/gkaiu/gkaiu4e.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/arphic/gkaiu/gkaiu4f.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/arphic/gkaiu/gkaiu51.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arph
-ic/gkaiu/gkaiu52.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gka
-iu/gkaiu53.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gka
-iu54.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu56.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu57.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu58.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu59.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu5a.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu5b.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/arphic/gkaiu/gkaiu5e.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/arphic/gkaiu/gkaiu5f.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/arphic/gkaiu/gkaiu60.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/arphic/gkaiu/gkaiu62.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arp
-hic/gkaiu/gkaiu65.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gk
-aiu/gkaiu66.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gk
-aiu67.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu68.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu6a.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu6c.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu6d.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu6e.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu72.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/arphic/gkaiu/gkaiu73.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/arphic/gkaiu/gkaiu75.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/arphic/gkaiu/gkaiu76.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/arphic/gkaiu/gkaiu78.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/ar
-phic/gkaiu/gkaiu79.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/g
-kaiu/gkaiu7a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/g
-kaiu7b.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu7f
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu80.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu81.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu82.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu89.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu8b.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/arphic/gkaiu/gkaiu8c.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/arphic/gkaiu/gkaiu8d.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/arphic/gkaiu/gkaiu8f.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/arphic/gkaiu/gkaiu91.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/a
-rphic/gkaiu/gkaiu94.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/
-gkaiu/gkaiu96.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/
-gkaiu97.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu9
-a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu9c.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on project.pdf (7 pages, 10165022 bytes).
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/arphic/gkaiu/gkaiu20.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/arphic/gkaiu/gkaiu4e.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/arphic/gkaiu/gkaiu4f.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arp
+hic/gkaiu/gkaiu51.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gk
+aiu/gkaiu52.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gk
+aiu53.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu54.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu56.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu57.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu58.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu59.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu5a.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/arphic/gkaiu/gkaiu5b.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/arphic/gkaiu/gkaiu5e.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/arphic/gkaiu/gkaiu5f.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/arphic/gkaiu/gkaiu60.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/ar
+phic/gkaiu/gkaiu62.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/g
+kaiu/gkaiu65.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/g
+kaiu66.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu67
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu68.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu6a.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu6c.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu6d.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu6e.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/arphic/gkaiu/gkaiu72.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/arphic/gkaiu/gkaiu73.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/arphic/gkaiu/gkaiu75.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/arphic/gkaiu/gkaiu76.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/a
+rphic/gkaiu/gkaiu78.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/
+gkaiu/gkaiu79.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/
+gkaiu7a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu7
+b.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu7f.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu80.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu81.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu82.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu89.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu8b.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/arphic/gkaiu/gkaiu8c.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/arphic/gkaiu/gkaiu8d.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/arphic/gkaiu/gkaiu8f.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
+arphic/gkaiu/gkaiu91.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic
+/gkaiu/gkaiu94.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu
+/gkaiu96.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu
+97.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu9a.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic/gkaiu/gkaiu9c.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on project.pdf (7 pages, 10180729 bytes).
 PDF statistics:
- 388 PDF objects out of 1000 (max. 8388607)
- 300 compressed objects within 3 object streams
+ 397 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
  37 named destinations out of 1000 (max. 500000)
  105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
