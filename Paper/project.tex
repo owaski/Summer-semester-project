@@ -1,4 +1,4 @@
-%File: formatting-instruction.tex
+% File: formatting-instruction.tex
 \documentclass[letterpaper]{article}
 \usepackage{aaai}
 \usepackage{times}
@@ -8,7 +8,7 @@
 \usepackage{csvsimple}
 \usepackage{CJK}
 \usepackage{url}
-%\usepackage[gbk]{inputenc}
+% \usepackage[gbk]{inputenc}
 \usepackage[hidelinks]{hyperref}
 \usepackage[all]{hypcap}
 \frenchspacing
@@ -20,207 +20,206 @@
 \begin{document}
 % The file aaai.sty is the style file for AAAI Press
 % proceedings, working notes, and technical reports.
-%
-\title{Spatiotemporal Distribution of Various Air Pollutants and Independence of Spatial and Temporal Patterns in mainland China}
+% 
+\title{Spatiotemporal Distribution of Various Air Pollutants and Orthogonality of Spatial and Temporal Patterns in mainland China}
 \author{Siqi Ouyang \and Yaowei Long \\ Yao Class 70}
 \maketitle
 \begin{abstract}
   \begin{quote}
-    In this paper, data of monitoring stations over China and interpolation method are used to analyse the distribution of air pollutants and evaluate the air quality of China in 2015. Six main air pollutants PM$_{2.5}$, PM$_{10}$, SO$_{2}$, NO$_{2}$, O$_{3}$ and CO are discussed. Considering China into 7 geographic regions, the regularities of spatial distribution of different pollutants are summarized. The regularities of temporal distribution are studied respectively in the time range of one day, one week, and the whole year. Further, the independence of regularities of distribution in space dimension and time dimension is discussed. Finally, comparing the estimation and standards, it can be found that the main pollutants are PM$_{2.5}$ and PM$_{10}$, and the overall air quality of China in 2015 is not bad.
+    In this paper, data of monitoring stations over China and interpolation method are used to analyse the distribution of air pollutants and evaluate the air quality of China in 2015. Six main air pollutants PM$_{2.5}$, PM$_{10}$, SO$_{2}$, NO$_{2}$, O$_{3}$ and CO are discussed. Considering 7 geographic regions of China, the regularities of spatial distribution of different pollutants are summarized. The regularities of temporal distribution are studied respectively in the time range of one day, one week, and the whole year. Further, the orthogonality of spatial and temporal distribution is discussed. Finally, comparing our estimations and standards, it can be found that the main pollutants are PM$_{2.5}$ and PM$_{10}$, and the overall air quality of China in 2015 is not bad.
   \end{quote}
 \end{abstract}
 
 
 \begin{CJK*}{UTF8}{gkai}
-\section{Introduction}
-In recent years, with the development of China, air pollution becomes a serious problem that government should deal with \shortcite{p1}. Under such condition, figuring out how air pollutants are distributed becomes an important task to the environmental management. In previous research, distributions of different air pollutants such as PM2.5, PM10, SO2 and NO2 over different locations and timescale has been studied in a partial manner \shortcite{p2,p3,p4,p5}.
+  \section{Introduction}
+  In recent years, with the development of China, air pollution becomes a serious problem that government should deal with \shortcite{p1}. Under such condition, figuring out how air pollutants are distributed becomes an important task to the environmental management. In previous research, distributions of different air pollutants such as PM$_{2.5}$, PM$_{10}$, SO$_{2}$ and NO$_{2}$ over different locations and timescale has been studied in a partial manner \shortcite{p2,p3,p4,p5}.
 
-In this paper, six sorts of air pollutants PM2.5, PM10, SO2, NO2, O3, CO together with AQI has been included. Spatial and temporal distribution of these pollutants are estimated in different scales using radial base function interpolation method. Additionally, the independence of space and time is concluded. 
+  In this paper, six sorts of air pollutants PM$_{2.5}$, PM$_{10}$, SO$_{2}$, NO$_{2}$, O$_{3}$, CO together with AQI has been included. Spatial and temporal distribution of these pollutants are estimated in different scales using radial base function interpolation method. Additionally, the orthogonality of spatial and temporal distribution is concluded.
 
-\section{Data}
+  \section{Data}
 
-The amount of pollutants observed in each station in 2015 is provided by Yang Yu. The data covers each hour in each station in 2015. There are 1497 stations in total. After removing those without coordinate and duplicate stations, 1256 stations are left and taken into account. To compute the average value of a particular region, the shape file of Chinese administrative division, which can be found on GADM\footnote{https://gadm.org/index.html}, is needed. With the shape file, we divide the map into 0.5 degree grid cell and aggregate the value of each cell in that region to obtain the average estimation.
+  The amount of pollutants observed in each station in 2015 is provided by Yang Yu. The data covers each hour in each station in 2015. There are 1497 stations in total. After removing those without coordinate and duplicate stations, 1256 stations are left and taken into account. To compute the average value of a particular region, the shape file of Chinese administrative division, which can be found on GADM\footnote{https://gadm.org/index.html}, is needed. With the shape file, we divide the map into 0.5 degree grid cell and aggregate the value of each cell in that region to obtain the average estimation.
 
-To make conclusions of different regions, we use the Chinese geographical division which divides China into seven geographical regions:
-\begin{itemize}
-\item Northeast: Heilongjiang, Jilin, Liaoning
-\item East: Shanghai, Jiangsu, Zhejiang, Anhui, Fujian, Jiangxi, Shandong, Taiwan
-\item North: Beijing, Tianjin, Shanxi, Hebei, Inner Mongolia
-\item Central: Henan, Hubei, Hunan
-\item South: Guangdong, Guangxi, Hainan, Hong Kong, Macao
-\item Southwest: Sichuan, Guizhou, Yunnan, Chongqing, Xizang
-\item Northwest: Shaanxi, Gansu, Qinghai, Ningxia, Xinjiang
-\end{itemize}
+  To make conclusions of different regions, we use the Chinese geographical division which divides China into seven geographical regions:
+  \begin{itemize}
+  \item Northeast: Heilongjiang, Jilin, Liaoning
+  \item East: Shanghai, Jiangsu, Zhejiang, Anhui, Fujian, Jiangxi, Shandong, Taiwan
+  \item North: Beijing, Tianjin, Shanxi, Hebei, Inner Mongolia
+  \item Central: Henan, Hubei, Hunan
+  \item South: Guangdong, Guangxi, Hainan, Hong Kong, Macao
+  \item Southwest: Sichuan, Guizhou, Yunnan, Chongqing, Xizang
+  \item Northwest: Shaanxi, Gansu, Qinghai, Ningxia, Xinjiang
+  \end{itemize}
 
-\section{Interpolation}
+  \section{Interpolation}
 
-There are many multivariate interpolation method for 2D interpolation, such as bilinear, bicubic methods \shortcite{wiki:1}. However, when applying these methods, there are always some empty parts in the map. It is because these methods are used to interpolate regular grid, but the position of stations does not form a regular grid. For this sort of scattered data, radial basis function(RBF) is used for interpolation in the paper \shortcite{wiki:2}. The function form is rather simple. For any point $\mathbf{x}$,
-\begin{eqnarray}
-  y(\mathbf{x}) = \sum_{i=1}^Nw_i\phi\left(\|\mathbf{x} - \mathbf{x_i}\|\right).
-\end{eqnarray}
-$\mathbf{x_i}$ are those observation points and $\phi$ is a customized function. The estimation of $w_i$ can be solved by linear least square.
+  There are many multivariate interpolation methods for 2D interpolation, such as bilinear, bicubic methods \shortcite{wiki:1}. However, when applying these methods, there are always some empty parts in the map. It is because these methods are used to interpolate regular grid, but the position of stations does not form a regular grid. For this sort of scattered data, radial basis function(RBF) is used for interpolation in the paper \shortcite{wiki:2}. The function form is rather simple. For any point $\mathbf{x}$,
+  \begin{eqnarray}
+    y(\mathbf{x}) = \sum_{i=1}^Nw_i\phi\left(\|\mathbf{x} - \mathbf{x_i}\|\right).
+  \end{eqnarray}
+  $\mathbf{x_i}$ are those observation points and $\phi$ is a customized function. The estimation of $w_i$ can be solved by linear least square.
 
-Below several different functions are tested respectively.
+  Below several different functions are tested respectively.
 
-\begin{figure}[h]
-  \includegraphics[width = 8.5cm]{Interpolation_from_20150102_to_20151231.png}
-  \caption{Interpolation of annually average concentration of PM2.5 using different
-    $\phi(r)$}
-  \label{figure:0}
-  \centering
-\end{figure}
+  \begin{figure}[h]
+    \includegraphics[width = 8.5cm]{Interpolation_from_20150102_to_20151231.png}
+    \caption{Interpolation of annually average concentration of PM2.5 using different
+      $\phi(r)$}
+    \label{figure:0}
+    \centering
+  \end{figure}
 
-In \hyperref[figure:0]{Figure \ref*{figure:0}}, those interpolated by ``quadratic'' methods have a lot of empty parts caused by negative value. However, this does not happen in ``linear'' methods. When comparing ``linear'' methods $1/(1+r), e^{-r}, r$, the images in Xinjiang are quite different. In $e^{-r}$, concentration degrades so rapidly that only points close to observation station are not green. In contrast to $e^{-r}$, $r$-interpolation degrades much slower and most of Xinjiang is red. $1/(1+r)$ is the intermediate between $e^{-r}$ and $r$. Due to lack of data, we cannot determine which function is the best. For simplicity, $r$-interpolation is used throughout the project.
+  In \hyperref[figure:0]{Figure \ref*{figure:0}}, those interpolated by ``quadratic'' methods have a lot of empty parts caused by negative value. However, this does not happen in ``linear'' methods. When comparing ``linear'' methods $1/(1+r), e^{-r}, r$, the images in Xinjiang are quite different. In $e^{-r}$, concentration degrades so rapidly that only points close to observation station are not green. In contrast to $e^{-r}$, $r$-interpolation degrades much slower and most of Xinjiang is red. $1/(1+r)$ is the intermediate between $e^{-r}$ and $r$. Due to lack of data, we cannot determine which function is the best. For simplicity, $r$-interpolation is used throughout the project.
 
- One of the advantage of RBF is that $y$ is linear. Therefore, when it needs to compute the average value interpolation, calculating interpolation in each hour and then taking average for each point are not necessary. We can directly compute the average value for each station and then calculate the interpolation, which saves much of the time.
+  One of the advantage of RBF is that $y$ is linear. Therefore, when it needs to compute the average value interpolation, calculating interpolation in each hour and then taking average for each point are not necessary. We can directly compute the average value for each station and then calculate the interpolation, which saves much of the time.
 
-\section{Spacial Distribution}
+  \section{Spatial Distribution}
 
-The high accuracy distributions in China of PM$_{2.5}$, PM$_{10}$, SO$_{2}$, NO$_{2}$, O$_{3}$, and CO, which are the main air pollutants, are got by the data and interpolation method mentioned above. The regularities of space distributions of these air pollutants are summarized in this part.
-\begin{figure}[h]
-  \includegraphics[width = 8.5cm]{Interpolation_from_20150102_to_20151231_linear.png}
-  \caption{Distribution of annually average concentration of pollutants}
-  \label{figure:1}
-  \centering
-\end{figure}
+  The high-accuracy distributions in China of PM$_{2.5}$, PM$_{10}$, SO$_{2}$, NO$_{2}$, O$_{3}$, and CO, which are the main air pollutants, are got by the data and interpolation method mentioned above. The regularities of space distributions of these air pollutants are summarized in this part.
+  \begin{figure}[h]
+    \includegraphics[width = 8.5cm]{Interpolation_from_20150102_to_20151231_linear.png}
+    \caption{Distribution of annually average concentration of pollutants}
+    \label{figure:1}
+    \centering
+  \end{figure}
 
-By an overview of \hyperref[figure:1]{Figure \ref*{figure:1}}, a general impression of the air quality over China can be got.
+  By an overview of \hyperref[figure:1]{Figure \ref*{figure:1}}, a general impression of the air quality over China can be got.
 
-In the figures which represent PM$_{2.5}$, PM$_{10}$, SO$_{2}$, NO$_{2}$, and CO, there are two areas which are in the west of Xinjiang and around Hebei with the most serious pollution, which are the blue areas in the figures. The distribution of the red areas, which are the areas with pollution not so serious, is radial from these two points. In the south of China and the northeast of China, the pollution is slight in comparison.
+  In the figures which represent PM$_{2.5}$, PM$_{10}$, SO$_{2}$, NO$_{2}$, and CO, two regions in the west of Xinjiang and around Hebei have the most serious pollution, which are the blue regions in the figures. The distribution of the red regions, which are the regions with pollution not so serious, is radial from the blue regions. In the south of China and the northeast of China, the pollution is slight in comparison.
 
-It is special for the figure which represent O$_{3}$. It shows that the distribution is average and that the area with the maximum concentration of O$_{3}$ is around the northeast of Qinghai, the middle of Shaanxi and the west of Inner Mongolia.
-
-
-In \hyperref[table:1]{Table \ref*{table:1}}, the pollutants are considered in seven main regions of China, which are Central China, North China (includes the whole Inner Mongolia), South China, East China, Northeast, Northwest, and Southwest. The sheet shows the annual average concentrations of different pollutants in different regions, which is calculated by the result of interpolation method. In keeping with the overview, the annual average concentrations of all pollutants in Northwest, South China, and Southwest are obviously smaller than those in Central China, North China, East China, and Northwest.
-
-As it is mentioned above, the two regions with the most serious pollution in China are in Xinjiang and around Hebei. However, the factors that make the high pollution are not the same for these two regions. The heavy industry with high emission in Hebei, such as iron and steel industry and cement industry, is one of the factors that make the poor air quality. However, the factors in Xinjiang are most natural factors but not man-made, such as climate and physiognomy. For example, the desert and sand storm will increase the concentration of particulate matter a lot.
-
-There is something that should be explained. Because of the maldistribution of the observation points, the estimation by interpolation in some regions, such as in the west of China and Inner Mongolia, may be different with the fact. The whole Inner Mongolia is considered in the North China. As a result, it is not strange to see that the pollution in North China is not so serious, although the pollution in Beijing-Tianjin-Hebei Region is the most serious as we know.
-
-\section{Temporal Distribution}
-
-The data also shows some regularities of the time distribution of pollutants. In this part, the regularities will be analysed in one day, in a week, and in the whole year. That is because human activities, such as work and rest, changes in one day cycle, in one week cycle, and in one year cycle. In the whole year, the climatic conditions change with the seasons, which may be the factors that affect pollutants concentration. Thus, it is a reasonable guess that the concentration of pollutants will have the certain regularity in one day, in one week, and in the whole year.
-
-\begin{figure}[h]
-  \includegraphics[width = 8.5cm]{dailyavg_pltn.png}
-  \caption{Daily average concentration of pollutants}
-  \label{figure:2}
-\end{figure}
-
-\hyperref[figure:2]{Figure \ref*{figure:2}} shows the change curves of average concentration over 24 hours for different pollutants. The curves of PM$_{2.5}$, PM$_{10}$, CO, and NO$_{2}$ are similar, which have two peaks with similar height. one peak appears around 10h, and the other peak appears around 22h. The curve of SO$_{2}$ also has two peaks, but the peak appears around 22h is much lower than the other. The curve of O$_{3}$ is special, which only has one peaks that is around 15h.
-
-According to some previous researches \shortcite{p2}, human daily activity is a factor of the regularity. The peak around 10h, which is time for trips, appears because of the traffic. The concentration increases at afternoon because of human activities after work, such as traffic and cooking. The concentration reaches another peak around 22h because the industrial production at night. The curve of O$_{3}$ seems strange, because being different with other pollutants, it is produced at high temperature from volatile organic compound and oxynitride. Thus its curve reaches the peak around 15h, when the temperature is highest.
-
-\begin{figure}[h]
-  \includegraphics[width = 8.5cm]{weekavg_pltn.png}
-  \caption{Weekly average concentration of pollutants}
-  \label{figure:3}
-\end{figure}
-
-\hyperref[figure:3]{Figure \ref*{figure:3}} shows the change curves of average daily concentration from Monday to Sunday. However, the curves seem zigzag and irregular. Although some curves have similar peaks, it may just be a coincidence because there are only seven days in a week. Moreover, there is no obvious difference between weekdays and weekend, which can not reflect any regularities of weekly concentration changes. That means that the regularity of human weekly activities is not shown in the concentration changes.
-
-\begin{figure}[h]
-  \includegraphics[width = 8.5cm]{monavg_pltn.png}
-  \caption{Monthly average concentration of pollutants}
-  \label{figure:4}
-\end{figure}
-
-\hyperref[figure:4]{Figure \ref*{figure:4}} shows the change curves of average monthly concentration over the whole year. As it shows, the shape of concentration curves of PM$_{2.5}$, PM$_{10}$, SO$_{2}$, NO$_{2}$, and CO is like a letter U. The concentration decreases from January to June, keeps a low value from June to September, and increases from September to December. The curve of O$_{3}$ is special again. It is an inverted-U with a peak around April and May.
-
-The exact reasons can not be given without further research, but some possible reasons can be given by the experience. The climate may be an important factor. Air motion and precipitation makes the diffusion of air pollutants easier in spring and summer, so the concentration decreases in spring and reaches a low level in summer. In contrast, air flows slowly in winter, which makes an opposite result. The heating in winter may be another reason, which increases the their use of coal and makes more polluting air. The curve of O$_{3}$ has a peak in summer because O$_{3}$ is produced at high temperature.
-
-\section{The Independence of Spacial Distribution and Temporal Distribution}
-
-The regularities of spacial distribution and temporal distribution of pollutants have been concluded above. Another valuable topic to discussed is the independence of spacial distribution and temporal distribution. That is the space universality of Temporal distribution and the time universality of Spacial distribution. To simplify the analyse, AQI is used to represented the integrative concentration of six main air pollutants.
-
-\begin{figure}[h]
-  \includegraphics[width = 8.5cm]{dailyavg_pro_pltn.png}
-  \caption{Daily average concentration of AQI for all provinces except Taiwan, Hong Kong and Macao (lack of data)}
-  \label{figure:5}
-\end{figure}
-
-\hyperref[figure:5]{Figure \ref*{figure:5}} analyses the change curves of average AQI over 24 hours for every province in China. The shape of curves in the figure are all similar, which shows that the regularity of daily distribution is general in all province in China. It is interesting that some provinces with low pollution have curves with little fluctuation. For example, the curve that represents Hainan, which is at the bottom of the figure, is nearly a horizontal line. This educes a reasonable educt that the regions with good air quailty have less changes of AQI.
-
-\begin{figure}[h]
-  \includegraphics[width = 8.5cm]{monavg_pro_pltn.png}
-  \caption{Monthly average concentration of AQI for all provinces except Taiwan, Hong Kong and Macao (lack of data)}
-  \label{figure:6}
-\end{figure}
-
-\hyperref[figure:6]{Figure \ref*{figure:6}} shows the change curves of monthly average AQI over the whole year for every province in China. It can be seen that all curves are roughly U-shaped, which conforms with the regularity summarized above and shows that the regularity is spacial general. Similar to the daily distribution, the conclusion that lower AQI is with less changes is also applied in this figure.
-
-It can be found that the curve of Xinjiang, which is at the top of the figure, is the most special. A possible reason is the unique natural and geographical conditions in Xinjiang. Another interesting phenomenon is that the AQI increases quickly between September and October in many province, which means that this is a general phenomenon in China. Similar to the analyses for 2014 in former research, the reason may be some special pollution processes in October, which leads to the decline in air quality across China. However, it can not be proved by the data.
-
-\begin{figure}[h]
-  \includegraphics[width = 8.5cm]{AQI_season.png}
-  \caption{Average AQI in 4 seasons}
-  \label{figure:7}
-\end{figure}
-
-\hyperref[figure:7]{Figure \ref*{figure:7}} is the space distribution of AQI in China in spring, summer, autumn, and winter. It can be found that the distribution does not change a lot in four season, which means that the space distribution is general in the whole year. The visible difference is the integral level of AQI, and the regularity has been discussed above. As the figure shows, the AQI in spring and winter is higher than that in summer and autumn, which matches the conclusion above.
-
-According to the discussion above, the independence of space distribution and time distribution of air pollutants has been verified preliminarily.
-
-\section{Comparison with Standard}
-
-The space distribution and time distribution of air pollutants is discussed in detail above. However, the perniciousness of air pollutants can not be easily expressed by the concentration only without considering the standards.
-
-The standards are different in different countries. In China, the latest ambient air quality standards is \textbf{GB 3095-2012}. In this part, the standards will be used to measure the effect of air pollutants on people.
-
-\hyperref[table:2]{Table \ref*{table:2}} shows the annual average concentration of PM$_{2.5}$, PM$_{10}$, SO$_{2}$, and NO$_{2}$ for every province. CO and O$_{3}$ are not considered because there are no annual average concentration standards for CO and O$_{3}$ in \textbf{GB 3095-2012}. It is not difficult to find that the concentrations of SO$_{2}$ and NO$_{2}$ satisfy secondary standards nearly in every province. However, there are only 7 and 10 provinces with concentration that satisfies secondary standard of PM$_{2.5}$ and PM$_{10}$ respectively. which is much worse than the situation of SO$_{2}$ and NO$_{2}$. That means the main pollutants that effect people are PM$_{2.5}$ and PM$_{10}$.
-
-An important value to measure the air quality is AQI. According to the computing method of AQI, AQI depends on the concentration of a pollutant that makes the most serious pollution. AQI is between 0 and 50 when all kinds of pollutants reach primary standard and is between 0 and 100 when all kinds of pollutants reach secondary standard.
+  It is special for the figure which represent O$_{3}$. It shows that the distribution is even and that the area with the maximum concentration of O$_{3}$ is around the northeast of Qinghai, the middle of Shaanxi and the west of Inner Mongolia.
 
 
-\hyperref[table:3]{Table \ref*{table:3}} counts the number of days with AQI falling in six intervals, which represent different air quality level, for every province. It also shows the total number of days for all province together. It can be found that the number of days with AQI at level 1 and level 2 is more than eighty percent, and that the number of days with AQI at level 1 is more than quarter. Thirteen provinces had more than ninety percent of days with AQI no more than 100. That means the overall air quality in 2015 was not bad. However, days with AQI at level 5 and level 6 exist, which means that there is some days with very serious pollution in some regions, such as Beijing-Tianjin-Hebei Region.
+  In \hyperref[table:1]{Table \ref*{table:1}}, the pollutants are considered in seven main regions of China, which are Central China, North China (includes the whole Inner Mongolia), South China, East China, Northeast, Northwest, and Southwest. The sheet shows the annual average concentrations of different pollutants in different regions, which is calculated by the result of interpolation method. In keeping with the overview, the annual average concentrations of all pollutants in Northwest, South China, and Southwest are obviously smaller than those in Central China, North China, East China, and Northwest.
 
-\section{Conclusion}
+  As mentioned above, the two regions with the most serious pollution in China are in Xinjiang and around Hebei. However, the factors that make the high pollution are not the same for these two regions. The heavy industry with high emission in Hebei, such as iron and steel industry and cement industry, is one of the factors that make the poor air quality. However, the factors in Xinjiang are most natural factors but not man-made, such as climate and physiognomy. For example, the desert and sand storm will increase the concentration of particulate matter a lot.
 
-The distribution of the main air pollutants in China in 2015 is estimated by data and interpolation method. After comparing different $\phi(r)$, $\phi(r)=r$ is chosen. Because of the lack of data, the distribution in Xinjiang can not be estimated accurately.
+  There is something that should be explained. Because of the maldistribution of the observation points, the estimation by interpolation in some regions, such as in the west of China and Inner Mongolia, may be different with the fact. The whole Inner Mongolia is considered in the North China. As a result, it is not strange to see that the pollution in North China is not so serious, although the pollution in Beijing-Tianjin-Hebei Region is the most serious as we know.
 
-The regularities of distribution are considered in both space dimension and time dimension.
+  \section{Temporal Distribution}
 
-About spacial distribution, the west of Xinjiang and Beijing-Tianjin-Hebei Region are two regions with the highest concentration of most of pollutants. O$_{3}$ is special, which concentrates around the northeast of Qinghai, the middle of Shaanxi and the west of Inner Mongolia. The distribution of other regions is radial from these regions.
+  The data also shows some regularities of the time distribution of pollutants. In this part, the regularities will be analysed in one day, in a week, and in the whole year. That is because human activities, such as work and rest, changes in one day cycle, in one week cycle, and in one year cycle. In the whole year, the climatic conditions change with the seasons, which may be the factors that affect pollutants concentration. Thus, it is a reasonable guess that the concentration of pollutants will have the certain regularity in one day, in one week, and in the whole year.
 
-About temporal distribution, regularities are considered in time range of one day, one week, and the whole year. It can be found that concentration changes regularly in one day and the whole year. The reason may be human activities and natural conditions. There may be regularity in time range of one week. However, it is not obvious and it seems that there is no relation with human cycle activities in a week.
+  \begin{figure}[h]
+    \includegraphics[width = 8.5cm]{dailyavg_pltn.png}
+    \caption{Daily average concentration of pollutants}
+    \label{figure:2}
+  \end{figure}
 
-It is interesting to analyse the independence of distribution in space dimension and time dimension. It can be discovered that, in principle, spacial distribution is general in time and temporal distribution is general in space.
+  \hyperref[figure:2]{Figure \ref*{figure:2}} shows the change curves of average concentration over 24 hours for different pollutants. The curves of PM$_{2.5}$, PM$_{10}$, CO, and NO$_{2}$ are similar, which have two peaks with similar height. one peak appears around 10h, and the other peak appears around 22h. The curve of SO$_{2}$ also has two peaks, but the peak appears around 22h is much lower than the other. The curve of O$_{3}$ is special, which only has one peaks that is around 15h.
 
-Comparing the estimations with standards, it can be found that the main pollutants that effect air quality are PM$_{2.5}$ and PM$_{10}$, and that the air quality is not bad in many provinces, except some regions with some days seriously polluted.
+  According to some previous researches \shortcite{p2}, human daily activity is a factor of the regularity. The peak around 10h, which is time for commute, appears because of the traffic. The concentration increases at afternoon because of human activities after work, such as traffic and cooking. The concentration reaches another peak around 22h because the industrial production at night. The curve of O$_{3}$ seems strange, because being different with other pollutants, it is produced at high temperature from volatile organic compound and oxynitride. Thus its curve reaches the peak around 15h, when the temperature is highest.
+
+  \begin{figure}[h]
+    \includegraphics[width = 8.5cm]{weekavg_pltn.png}
+    \caption{Weekly average concentration of pollutants}
+    \label{figure:3}
+  \end{figure}
+
+  \hyperref[figure:3]{Figure \ref*{figure:3}} shows the change curves of average daily concentration from Monday to Sunday. However, the curves seem zigzag and irregular. Although some curves have similar peaks, it may just be a coincidence because there are only seven days in a week. Moreover, there is no obvious difference between weekdays and weekend, which can not reflect any regularities of weekly concentration changes. That means that the regularity of human weekly activities is not shown in the concentration changes.
+
+  \begin{figure}[h]
+    \includegraphics[width = 8.5cm]{monavg_pltn.png}
+    \caption{Monthly average concentration of pollutants}
+    \label{figure:4}
+  \end{figure}
+
+  \hyperref[figure:4]{Figure \ref*{figure:4}} shows the change curves of average monthly concentration over the whole year. As it shows, the shape of concentration curves of PM$_{2.5}$, PM$_{10}$, SO$_{2}$, NO$_{2}$, and CO is like a letter U. The concentration decreases from January to June, keeps a low value from June to September, and increases from September to December. The curve of O$_{3}$ is special again. It is an inverted-U with a peak around April and May.
+
+  The exact reasons can not be given without further research, but some possible reasons can be given by the experience. The climate may be an important factor. Air motion and precipitation makes the diffusion of air pollutants easier in spring and summer, so the concentration decreases in spring and reaches a low level in summer. In contrast, air flows slowly in winter, which makes an opposite result. The heating in winter may be another reason, which increases the their use of coal and makes more polluting air. The curve of O$_{3}$ has a peak in summer because O$_{3}$ is produced at high temperature.
+
+  \section{Orthogonality of Spatial Distribution and Temporal Distribution}
+
+  The regularities of spatial distribution and temporal distribution of pollutants have been concluded above. Another valuable topic to discuss is the orthogonality of spatial distribution and temporal distribution. To simplify the analyse, AQI is used to represented the integrative concentration of six main air pollutants.
+
+  \begin{figure}[h]
+    \includegraphics[width = 8.5cm]{dailyavg_pro_pltn.png}
+    \caption{Daily average concentration of AQI for all provinces except Taiwan, Hong Kong and Macao (lack of data)}
+    \label{figure:5}
+  \end{figure}
+
+  \hyperref[figure:5]{Figure \ref*{figure:5}} analyses the change curves of average AQI over 24 hours for every province in China. The shape of curves in the figure are all similar, which shows that the regularity of daily distribution is general in all province in China. It is interesting that some provinces with low pollution have curves with little fluctuation. For example, the curve that represents Hainan, which is at the bottom of the figure, is nearly a horizontal line. This educes a reasonable educt that the regions with good air quailty have less changes of AQI.
+
+  \begin{figure}[h]
+    \includegraphics[width = 8.5cm]{monavg_pro_pltn.png}
+    \caption{Monthly average concentration of AQI for all provinces except Taiwan, Hong Kong and Macao (lack of data)}
+    \label{figure:6}
+  \end{figure}
+
+  \hyperref[figure:6]{Figure \ref*{figure:6}} shows the change curves of monthly average AQI over the whole year for every province in China. It can be seen that all curves are roughly U-shaped, which conforms with the regularity summarized above and shows that the regularity is general in space. Similar to the daily distribution, the conclusion that lower AQI is with less changes is also applied in this figure.
+
+  It can be found that the curve of Xinjiang, which is at the top of the figure, is the most special. A possible reason is the unique natural and geographical conditions in Xinjiang. Another interesting phenomenon is that the AQI increases quickly between September and October in many province, which means that this is a general phenomenon in China. Similar to the analyses for 2014 in former research \shortcite{p2}, the reason may be some special pollution processes in October, which leads to the decline in air quality across China. However, it can not be proved by the data.
+
+  \begin{figure}[h]
+    \includegraphics[width = 8.5cm]{AQI_season.png}
+    \caption{Average AQI in 4 seasons}
+    \label{figure:7}
+  \end{figure}
+
+  \hyperref[figure:7]{Figure \ref*{figure:7}} is the spatial distribution of AQI in China in spring, summer, autumn, and winter. It can be found that the distribution does not change a lot in four seasons, which means that the spatial distribution is general in the whole year. The visible difference is the integral level of AQI, and the regularity has been discussed above. As the figure shows, the AQI in spring and winter is higher than that in summer and autumn, which matches the conclusion above.
+
+  According to the discussion above, the orthogonality of spatial distribution and temporal distribution of air pollutants has been verified preliminarily.
+
+  \section{Comparison with Standard}
+
+  The spatial distribution and temporal distribution of air pollutants is discussed in detail above. However, the perniciousness of air pollutants can not be easily expressed by the concentration only without considering the standards.
+
+  The standards are different in different countries. In China, the latest ambient air quality standards is \textbf{GB 3095-2012}. In this part, the standards will be used to measure the effect of air pollutants on people.
+
+  \hyperref[table:2]{Table \ref*{table:2}} shows the annual average concentration of PM$_{2.5}$, PM$_{10}$, SO$_{2}$, and NO$_{2}$ for every province. CO and O$_{3}$ are not considered because there are no annual average concentration standards for CO and O$_{3}$ in \textbf{GB 3095-2012}. It is not difficult to find that the concentrations of SO$_{2}$ and NO$_{2}$ satisfy secondary standards nearly in every province. However, there are only 7 and 10 provinces with concentration that satisfies secondary standard of PM$_{2.5}$ and PM$_{10}$ respectively. which is much worse than the situation of SO$_{2}$ and NO$_{2}$. That means the main pollutants that effect people are PM$_{2.5}$ and PM$_{10}$.
+
+  An important value to measure the air quality is AQI. According to the computing method of AQI, AQI depends on the concentration of a pollutant that makes the most serious pollution. AQI is between 0 and 50 when all kinds of pollutants reach primary standard and is between 0 and 100 when all kinds of pollutants reach secondary standard.
+
+  \hyperref[table:3]{Table \ref*{table:3}} counts the number of days with AQI falling in six intervals, which represent different air quality level, for every province. It also shows the total number of days for all province together. It can be found that the number of days with AQI at level 1 and level 2 is more than eighty percent, and that the number of days with AQI at level 1 is slightly more than quarter. Thirteen provinces had more than ninety percent of days with AQI no more than 100. It shows that the overall air quality in 2015 was not bad. However, days with AQI at level 5 and level 6 exist, which means that there is some days with very serious pollution in some regions, such as Beijing-Tianjin-Hebei Region.
+
+  \section{Conclusion}
+
+  The distribution of the main air pollutants in China in 2015 is estimated by data and interpolation method. After comparing different $\phi(r)$, $\phi(r)=r$ is chosen. Because of the lack of data, the distribution in Xinjiang can not be estimated accurately.
+
+  The regularities of distribution are considered in both space dimension and time dimension.
+
+  About spatial distribution, the west of Xinjiang and Beijing-Tianjin-Hebei Region are two regions with the highest concentration of most of pollutants. O$_{3}$ is special, which concentrates around the northeast of Qinghai, the middle of Shaanxi and the west of Inner Mongolia. The distribution of other regions is radial from these regions.
+
+  About temporal distribution, regularities are considered in time range of one day, one week, and the whole year. It can be found that concentration changes regularly in one day and the whole year. The reason may be human activities and natural conditions. There may be regularity in time range of one week. However, it is not obvious and it seems that there is no relation with human cycle activities in a week.
+
+  It is interesting to analyse the orthogonality of distribution in space dimension and time dimension. It can be discovered that, in principle, spatial distribution is general in time and temporal distribution is general in space.
+
+  Comparing the estimations with standards, it can be found that the main pollutants that affect air quality are PM$_{2.5}$ and PM$_{10}$, and that the air quality is not bad in many provinces, except some regions with some days seriously polluted.
 
 
-\begin{table*}
-  \begin{tabular}{c|cccccc}
-    \bf{Region} & \bf{PM2.5} & \bf{PM10} & \bf{SO2} & \bf{NO2} & \bf{O3} & \bf{CO} \\\hline
-    \csvreader[head to column names]{./csv/regional_annual_pollutant.csv}{}{\\\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv & \csvcolvi & \csvcolvii}
-  \end{tabular}
-  \centering
-  \caption{Annually average concentration of pollutants in seven regions}
-  \label{table:1}
-\end{table*}
+  \begin{table*}
+    \begin{tabular}{c|cccccc}
+      \bf{Region} & \bf{PM2.5} & \bf{PM10} & \bf{SO2} & \bf{NO2} & \bf{O3} & \bf{CO} \\\hline
+      \csvreader[head to column names]{./csv/regional_annual_pollutant.csv}{}{\\\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv & \csvcolvi & \csvcolvii}
+    \end{tabular}
+    \centering
+    \caption{Annually average concentration of pollutants in seven regions}
+    \label{table:1}
+  \end{table*}
 
-\begin{table*}
-  \begin{tabular}{c|cccc}
-    \bf{Province} & \bf{PM2.5} & \bf{PM10} & \bf{SO2} & \bf{NO2} \\\hline
-    \csvreader[head to column names]{./csv/provincial_annual_pollutant.csv}{}{\\\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv}
-  \end{tabular}
-  \centering
-  \caption{Annually average concentration of pollutants in all provinces except Taiwan, Hong Kong and Macao (lack of data)}
-  \label{table:2}
-\end{table*}
+  \begin{table*}
+    \begin{tabular}{c|cccc}
+      \bf{Province} & \bf{PM2.5} & \bf{PM10} & \bf{SO2} & \bf{NO2} \\\hline
+      \csvreader[head to column names]{./csv/provincial_annual_pollutant.csv}{}{\\\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv}
+    \end{tabular}
+    \centering
+    \caption{Annually average concentration of pollutants in all provinces except Taiwan, Hong Kong and Macao (lack of data)}
+    \label{table:2}
+  \end{table*}
 
-\begin{table*}[t]
-  \begin{tabular}{c|cccccccc}
-    \bf{Province} & \bf{0-50} & \bf{51-100} & \bf{101-150} & \bf{151-200} & \bf{201-300} & \bf{301-500} & \bf{Passing Rate($\mathbf{\leq 50}$)} & \bf{Passing Rate($\mathbf{\leq 100}$)} \\\hline
-    \csvreader[head to column names]{./csv/valid_days.csv}{}{\\\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv & \csvcolvi & \csvcolvii & \csvcolviii & \csvcolix}
-  \end{tabular}
-  \centering
-  \caption{Days of AQI on different level in all provinces except Taiwan, Hong Kong and Macao (lack of data)}
-  \label{table:3}
-\end{table*}
+  \begin{table*}[t]
+    \begin{tabular}{c|cccccccc}
+      \bf{Province} & \bf{0-50} & \bf{51-100} & \bf{101-150} & \bf{151-200} & \bf{201-300} & \bf{301-500} & \bf{Passing Rate($\mathbf{\leq 50}$)} & \bf{Passing Rate($\mathbf{\leq 100}$)} \\\hline
+      \csvreader[head to column names]{./csv/valid_days.csv}{}{\\\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv & \csvcolvi & \csvcolvii & \csvcolviii & \csvcolix}
+    \end{tabular}
+    \centering
+    \caption{Days of AQI on different level in all provinces except Taiwan, Hong Kong and Macao (lack of data)}
+    \label{table:3}
+  \end{table*}
 
-\bibliographystyle{aaai}
-\bibliography{Bibliography_File}
+  \bibliographystyle{aaai}
+  \bibliography{Bibliography_File}
 \end{CJK*}
 
 \end{document}

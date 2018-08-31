@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  31 AUG 2018 00:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  31 AUG 2018 12:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -482,8 +482,7 @@ Underfull \hbox (badness 1708) in paragraph at lines 138--138
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./picture/dailyavg_pltn.png> <./picture/weekavg_pltn.png> <./picture/monavg
-_pltn.png>] <./picture/monavg_pro_pltn.png, id=106, 462.528pt x 346.896pt>
+<./picture/monavg_pro_pltn.png, id=96, 462.528pt x 346.896pt>
 File: ./picture/monavg_pro_pltn.png Graphic file (type png)
 
 <use ./picture/monavg_pro_pltn.png>
@@ -494,7 +493,8 @@ Overfull \hbox (2.45404pt too wide) in paragraph at lines 145--146
 [][] 
  []
 
-<./picture/AQI_season.png, id=108, 462.528pt x 346.896pt>
+[3 <./picture/dailyavg_pltn.png> <./picture/weekavg_pltn.png> <./picture/monavg
+_pltn.png>] <./picture/AQI_season.png, id=109, 462.528pt x 346.896pt>
 File: ./picture/AQI_season.png Graphic file (type png)
 
 <use ./picture/AQI_season.png>
@@ -512,7 +512,12 @@ Underfull \hbox (badness 1014) in paragraph at lines 168--169
 
 [4 <./picture/dailyavg_pro_pltn.png> <./picture/monavg_pro_pltn.png> <./picture
 /AQI_season.png>]
-Overfull \hbox (19.22894pt too wide) in paragraph at lines 213--218
+Underfull \hbox (badness 1199) in paragraph at lines 182--183
+[]\OT1/ptm/m/n/10 About spa-tial dis-tri-bu-tion, the west of Xin-jiang and
+ []
+
+
+Overfull \hbox (19.22894pt too wide) in paragraph at lines 212--217
  [][] 
  []
 
@@ -570,15 +575,21 @@ LaTeX Font Warning: Font shape `C70/gkai/m/it' undefined
 (Font)              using `C70/gkai/m/n' instead on input line 24.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
  [5] [6] [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
  (./project.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 226.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 226.
-Package rerunfilecheck Info: File `project.out' has not changed.
-(rerunfilecheck)             Checksum: 380188B38358B784BC93374C5F94DD65;458.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
 
+
+Package rerunfilecheck Warning: File `project.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `project.out':
+(rerunfilecheck)             Before: C3D501DC4CA66B80288E8CAE88F50DF9;455
+(rerunfilecheck)             After:  990F1DD59D45B9C50A8A401EB75044A0;455.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -589,11 +600,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  7876 strings out of 492995
  124876 string characters out of 6132704
- 240326 words of memory out of 5000000
+ 239204 words of memory out of 5000000
  11224 multiletter control sequences out of 15000+600000
  33965 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,46p,857b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,11n,46p,824b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texl
@@ -653,10 +664,10 @@ arphic/gkaiu/gkaiu91.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/arphic
 /local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 7/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on project.pdf (7 pages, 10181682 bytes).
+Output written on project.pdf (7 pages, 10181726 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 306 compressed objects within 4 object streams
+ 398 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
  37 named destinations out of 1000 (max. 500000)
  105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
